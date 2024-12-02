@@ -98,14 +98,16 @@ public class TugasKelompok {
                 System.out.print("Masukkan Jenis Prestasi yang akan dianalisis: ");
                 String jenisCari = scanner.nextLine();
 
-                System.out.print("Masukkan Tahun Prestasi yang akan dianalisis: ");
-                int tahunCari;
-                try {
-                    tahunCari = Integer.parseInt(scanner.nextLine());
-                } catch (NumberFormatException e) {
-                    System.out.println("Input tahun tidak valid.");
-                    continue;
+                int tahunCari=2024;
+                while (true) {
+                    System.out.print("Masukkan Tahun Prestasi yang akan dianalisis: ");
+                    tahunCari = scanner.nextInt();
+                    if(tahunCari >=2010 && tahunCari<=2024){
+                        break;
+                    }
                 }
+                
+
 
                 boolean ditemukan = false;
 
