@@ -101,6 +101,7 @@ public class TugasKelompok {
                 while (true) {
                     System.out.print("Masukkan Tahun Prestasi yang akan dianalisis: ");
                     tahunCari = scanner.nextInt();
+                    scanner.nextLine();
                     if(tahunCari >=2010 && tahunCari<=2024){
                         break;
                     }
