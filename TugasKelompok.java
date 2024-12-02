@@ -54,14 +54,18 @@ public class TugasKelompok {
                 }
 
                 int tahun;
-               while (true) {
-            System.out.print("Masukkan Tahun Prestasi (2010 - 2024): ");
-            int tahun = sc.nextInt();
-            
-            if (tahun < 2010 && tahun >= 2024) {
-            System.out.println("Input tahun harus berupa angka. Coba lagi.");
-        
-        }
+                while (true) {
+                    System.out.print("Masukkan Tahun Prestasi (2010-" + tahunSekarang + "): ");
+                 
+                        tahun = Integer.parseInt(scanner.nextLine());
+                        if (tahun >= 2010 && tahun <= tahunSekarang) {
+                            break;
+                        } else {
+                            System.out.println("Tahun harus antara 2010 hingga " + tahunSekarang + ".");
+                        }
+                   
+                }
+
              
                 prestasi[jumlahPrestasi][0] = nama;
                 prestasi[jumlahPrestasi][1] = nim;
